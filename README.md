@@ -2,6 +2,10 @@
 
 Keep your system clipboard synchronized with a text file on your desktop.
 
+Text is stored as normal UTF-8 text. Images are converted to PNG and stored as
+`data:image/png;base64,...` text. When that value is written back to the
+clipboard on Windows, it becomes an image again.
+
 ## Usage
 
 Install the project with `uv sync`, then start the service:
