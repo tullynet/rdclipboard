@@ -1,0 +1,24 @@
+[project]
+name = "rdclipboard"
+version = "0.1.0"
+description = "Keep the system clipboard synchronized with a desktop text file"
+readme = "README.md"
+authors = [
+    { name = "Dan Tully", email = "Dan.Tully@netapp.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyperclip>=1.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+rdclipboard = "rdclipboard:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
